@@ -11,14 +11,21 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:extension.sayHello"
+        "onCommand:extension.sayHello",
+        "onCommand:extension.laugh"
     ],
     "main": "./out/extension",
     "contributes": {
-        "commands": [{
-            "command": "extension.sayHello",
-            "title": "Hello World"
-        }]
+        "commands": [
+            {
+                "command": "extension.sayHello",
+                "title": "My First Ext"
+            },
+            {
+                "command": "extension.laugh",
+                "title": "Laugh your heart off"
+            }
+        ]
     },
     "scripts": {
         "vscode:prepublish": "npm run compile",

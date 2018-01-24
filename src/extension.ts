@@ -18,10 +18,14 @@ export function activate(context: vscode.ExtensionContext) {
         // The code you place here will be executed every time your command is executed
 
         // Display a message box to the user
-        vscode.window.showInformationMessage('Hello World!');
+        vscode.window.showInformationMessage('Well, hello there!');
     });
 
+    let laugh = vscode.commands.registerCommand('extension.laugh', function() {
+        vscode.window.showInformationMessage('HAHAHAHAHA!');
+    });
     context.subscriptions.push(disposable);
+    context.subscriptions.push(laugh);
 }
 
 // this method is called when your extension is deactivated
